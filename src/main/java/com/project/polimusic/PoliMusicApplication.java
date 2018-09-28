@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("com.project.polimusic.archivoartista")
-@EnableJpaRepositories("com.project.polimusic.archivoartista.repository")
-@EntityScan("com.project.polimusic.archivoartista.entity")
+@ComponentScan("com.project.polimusic")
+@EnableJpaRepositories("com.project.polimusic.repository")
+@EntityScan("com.project.polimusic.entity")
 public class PoliMusicApplication {
 
 	public static void main(String[] args) {
