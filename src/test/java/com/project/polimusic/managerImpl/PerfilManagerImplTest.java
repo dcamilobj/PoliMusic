@@ -25,40 +25,43 @@ public class PerfilManagerImplTest {
 			List<Perfil> perfiles = perfilManager.getAllPerfiles();
 			System.out.println(perfiles.size());
 		}catch(Exception e){
-			fail("Error - " + e);
+			fail("Error al obtener perfiles- " + e);
 		}
 		
 		
 	}
-
+	
 	@Test
-	@Rollback(false)
-	public void testGetPerfilById() {
+	public void testSavePerfil() {
 		try{
 			Perfil perfil = new Perfil();
 			perfil.setIdPerfil(1L);
 			perfil.setNombrePerfil("Administrador");
 			perfilManager.savePerfil(perfil);
 		} catch(Exception e){
-			fail("Not yet implemented");
+			fail("Error al guardar perfil- " + e);
 		}
 	}
 
 	@Test
-	public void testSavePerfil() {
+	public void testGetPerfilById() {
 		try{
-			
+			Perfil perfil = perfilManager.getPerfilById(1L);
+			assertNotNull(perfil);
 		} catch(Exception e){
-			fail("Not yet implemented");
+			fail("Error al obtener perfil- " + e);
 		}
 	}
 
 	@Test
 	public void testDeletePerfil() {
 		try{
-			
+			Perfil perfil = new Perfil();
+			perfil.setIdPerfil(1L);
+			perfil.setNombrePerfil("Administrador");
+			perfilManager.deletePerfil(perfil);
 		} catch(Exception e){
-			fail("Not yet implemented");
+			fail("Error al eliminar el perfil- " + e);
 		}
 	}
 
