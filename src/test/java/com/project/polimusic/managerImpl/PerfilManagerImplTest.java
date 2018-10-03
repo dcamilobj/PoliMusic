@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.annotation.Rollback;
 
 import com.project.polimusic.entity.Perfil;
 import com.project.polimusic.manager.PerfilManager;

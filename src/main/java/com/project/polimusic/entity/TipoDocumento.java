@@ -6,14 +6,14 @@ import javax.persistence.*;
 public class TipoDocumento {
 	@Id
 	@GeneratedValue
-	private Long idTipoDocumento;
+	private Integer idTipoDocumento;
 	@Column
 	private String descripcion;
 
 	/**
 	 * @return the idTipoDocumento
 	 */
-	public Long getIdTipoDocumento() {
+	public Integer getIdTipoDocumento() {
 		return idTipoDocumento;
 	}
 
@@ -21,7 +21,7 @@ public class TipoDocumento {
 	 * @param idTipoDocumento
 	 *            the idTipoDocumento to set
 	 */
-	public void setIdTipoDocumento(Long idTipoDocumento) {
+	public void setIdTipoDocumento(Integer idTipoDocumento) {
 		this.idTipoDocumento = idTipoDocumento;
 	}
 
